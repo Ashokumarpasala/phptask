@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "mpdf/mpdf": "^6.1",
+        "tecnickcom/tcpdf": "^6.7",
+        "stripe/stripe-php": "^13.16"
+    }
+}
