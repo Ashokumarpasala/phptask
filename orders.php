@@ -19,15 +19,16 @@
 </head>
 <body style="font-family: cursive;">
     <h1>Wedding Cards You Purchased</h1>
-    <a href="home_page.php"><p>Back to home page</p></a>
+    <a href="profile.php"><p>back to profile page</p></a>
     <?php 
     require __DIR__. "/database.php";
-
+    
     if ($conn) {
         $sql = "SELECT * FROM orders";
         $result = $conn->query($sql);
-
         if ($result->num_rows > 0) {
+            $orders_count = $result->num_rows;
+            echo "<p>You have purchased $orders_count wedding cards.</p>";
             while($row = $result->fetch_assoc()) {
                 ?>
                 <div class="wrap">
