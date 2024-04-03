@@ -15,7 +15,7 @@
 				align-items: end;
 			}
             .img {
-                width: 150px;
+                width: 250px;
             }
             .box {
                 display: flex;

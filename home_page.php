@@ -63,18 +63,54 @@
         }
         ?>
         </div>
-                <form method="post" action="payment_page.php">
-            <div style="display: flex; font-size:14px;">
-                <div>
-                    <p style="font-weight: bold;">Get this card</p>
-                    <button class="b-shadow" style=" padding: 10px 15px; margin : 10px 0px; border-radius: 5px;"> <strong> <?php echo "pay-\$\t 20.00"; ?></strong></button>
-                    <p>1.A well-designed wedding card reflects the couple's brand image and sets the tone for their wedding event. 
-                        <br> <br>2.A professionally designed wedding card contributes to the overall aesthetic and ambiance of the wedding, creating a cohesive and memorable experience for guests.</p>                   
-                    </div>
+        <form method="post" action="payment_page.php" enctype="multipart/form-data">
+        <?php
+         $product_description = "A well-designed wedding card reflects the couple's brand image and sets the tone for their wedding event.";
+         $product_img = "https://www.happywedding.app/blog/wp-content/uploads/2023/06/Wedding-Invitation-Card-Design.jpg";
+         $product_name = " premimum card";
+         $product_id = 'order_'.uniqid();
+         $product_amout = 20;
+        ?>
+            <div style="display: flex; font-size:14px; margin:20px;">
+                <div style="width: 75%;">
+                    <p style="font-weight: bold;">Get this  <?php echo $product_name; ?></p>
+                    <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" id="">
+                    <input type="hidden" name="product_amount" value="<?php echo 100 *$product_amout; ?>" id="">
+                    <input type="hidden" name="product_img" value="<?php echo $product_img; ?>" id="">
+                    <input type="hidden" name="product_name" value="<?php echo $product_name; ?>" id="">
+                    <input type="hidden" name="product_description" value="<?php echo $product_description; ?>" id="">
+                    <p>1.<?php echo $product_description; ?> </p>
+                    <button class="b-shadow" style=" padding: 10px 15px; margin : 10px 0px; border-radius: 5px;"> <strong> <?php echo "pay-INR\t 20.00/-"; ?></strong></button>
+                </div>
                     <div >
-                        <img style="width: 100%;" src="https://www.happywedding.app/blog/wp-content/uploads/2023/06/Wedding-Invitation-Card-Design.jpg" alt="">
+                        <img style="width: 300px" src="<?php echo $product_img; ?>" alt="">
                     </div>
                 </div>
-            </form>
+        </form>
+                <form method="post" action="payment_page.php" enctype="multipart/form-data">
+        <?php
+         $product_description = "A well-designed wedding card reflects the couple's brand image and sets the tone for their wedding event.";
+         $product_img = "https://i.etsystatic.com/31502934/r/il/d4a85c/4000852774/il_fullxfull.4000852774_nane.jpg";
+         $product_name = "valentine premimum card";
+         $product_id = 'order_'.uniqid();
+         $product_amout = 28;
+        ?>
+            <div style="display: flex; font-size:14px; margin:20px;">
+                <div style="width: 75%;">
+                    <p style="font-weight: bold;">Get this  <?php echo $product_name; ?></p>
+                    <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" id="">
+                    <input type="hidden" name="product_amount" value="<?php echo 100 *$product_amout; ?>" id="">
+                    <input type="hidden" name="product_img" value="<?php echo $product_img; ?>" id="">
+                    <input type="hidden" name="product_name" value="<?php echo $product_name; ?>" id="">
+                    <input type="hidden" name="product_description" value="<?php echo $product_description; ?>" id="">
+                    <p>1.<?php echo $product_description; ?> </p>
+                    <!-- <br> <br>2.A professionally designed wedding card contributes to the overall aesthetic and ambiance of the wedding, creating a cohesive and memorable experience for guests.</p>                    -->
+                    <button class="b-shadow" style=" padding: 10px 15px; margin : 10px 0px; border-radius: 5px;"> <strong> <?php echo "pay-INR\t 20.00/-"; ?></strong></button>
+                </div>
+                    <div >
+                        <img style="width: 300px;" src="<?php echo $product_img; ?>" alt="">
+                    </div>
+                </div>
+        </form>
 	</body>
 </html>
